@@ -11,6 +11,11 @@ When you are to paste it simply press `"0p`
 ### Demo
 ![Demo](./trimmed.gif)
 
+### Dependencies
+The following plugin uses `figlet` and requires that you have it install,
+you can install it with the following command on arch linux
+`sudo pacman -S figlet`
+
 ### Install and Example config
 If you are using lazy as your plugin manager you can simply use the provided
 snippet below to install and configure the plugin
