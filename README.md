@@ -11,7 +11,9 @@ When you are to paste it simply press `"0p`
 ### Demo
 ![Demo](./trimmed.gif)
 
-### Example config
+### Install and Example config
+If you are using lazy as your plugin manager you can simply use the provided
+snippet below to install and configure the plugin
 ```lua
 -- Example config
 return {
