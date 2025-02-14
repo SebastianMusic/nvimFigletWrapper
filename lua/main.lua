@@ -27,3 +27,5 @@ local function figletCommand(opts)
 	end)
 end
 vim.api.nvim_create_user_command("Figlet", figletCommand, { nargs = "+" })
+
+return {}
