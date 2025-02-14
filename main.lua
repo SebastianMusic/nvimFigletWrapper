@@ -1,6 +1,12 @@
 local function figletCommand(opts)
-	local input = opts.args
-	vim.system({ "figlet", "-f", "slant", input }, { text = true }, function(result)
+	local format, input = opts.args:match("^(%S+)%s(.+)$")
+
+	if not format or not input then
+		print("Usage: Figlet <font> <text>")
+		return
+	end
+
+	vim.system({ "figlet", "-f", format, input }, { text = true }, function(result)
 		vim.schedule(function()
 			if result.code == 0 then
 				local commentString = vim.bo.commentstring
@@ -20,4 +26,4 @@ local function figletCommand(opts)
 		end)
 	end)
 end
-vim.api.nvim_create_user_command("Figlet", figletCommand, { nargs = 1 })
+vim.api.nvim_create_user_command("Figlet", figletCommand, { nargs = "+" })
